@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, TextInput, Button } from "react-native";
+import Rating from "./Rating";
 
 export default function App() {
   const [resultados, setResult] = useState([]);
@@ -36,6 +37,7 @@ export default function App() {
           <li>Autor: {resultado.author}</li>
           <li>Título: {resultado.title}</li>
           <li>URL: {resultado.url}</li>
+          <li><Rating/></li>
         </View>
       ))}
       <StatusBar style="auto" />
